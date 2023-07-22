@@ -1,0 +1,168 @@
+/* This Page done by */
+/* Name : T.J.Dinal.I.Fernando */
+/* IIT ID : 20220536  */
+/* UOW ID : w2000072  */
+
+body , html{
+  color: white;
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+#myVideo {
+  position: fixed;
+  right: 0;                 
+  bottom: 0;                
+  min-width: 100%;         
+  min-height: 100%;         
+  z-index: -1;              
+  filter: brightness(0.5);
+}
+h1{
+  text-align: center;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 50px;
+  font-weight: bolder;
+}
+h2{
+  text-align: center;
+  color: gray;
+  size: 5px;
+}
+#Products_Items{
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 80px;
+  font-size: 20px;
+}
+#Products_Items legend{
+  font-weight: bolder;
+  color: gray;
+  font-size: 40px;
+}
+.products{
+  margin: 22px;
+}
+.products_page{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.product_cart {
+  background-image: linear-gradient(-45deg, #002147, #004080, #0d98ba, #3ea6d1, #4f9dc9);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 10px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  text-align: center;
+  transition: transform 0.5s;
+  box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.1), 0 0 10px 3px gray;
+  border: 1px solid whitesmoke;
+  color: white;
+  width: 250px;
+}
+.product_cart:hover{
+  transform: translateY(-25px);
+}
+.product_cart img{
+  width: 100%;
+  max-height: fit-content;
+  object-fit: cover;
+}
+.product_cart p {
+  margin: 10px 0;
+  font-weight: bold;
+}
+.product_cart label {
+  margin-right: 5px;
+}
+.product_cart select {
+  height: 22px;
+  width: 60px;
+  padding-left: 10px;
+  margin-right: 5px;
+  border: 1px solid;
+  outline: none;
+}
+.product_cart input[type=number] {
+  height: 22px;
+  width: 50px;
+  padding-left: 10px;
+  margin-right: 5px;
+  border: 1px solid;
+  outline: none;
+}
+.product_cart .btn {
+  width: 100px;
+  height: 40px;
+  background-color: rgb(24, 111, 182);
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.product_cart .btn:hover {
+  background-color: blue;
+  transition: transform 0.5;
+  color: #000;
+}
+.cart-icon {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 999;
+  cursor: pointer;
+}
+#cart {
+  position: fixed;
+  top: 0;
+  right: -50%; 
+  width: 50%; 
+  height: 100%;
+  background-color: black;
+  box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  z-index: 998;
+}
+#cart legend{
+  color: gray;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
+#cart p, h2{
+  text-align: center;
+  font-size: 18px;
+}
+#total_bill, #order{
+  font-size: 25px;
+  font-weight: bold;
+}
+.submit{
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+  padding: 12px 20px;
+  margin-top: 0px;
+  margin-right: 300px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  background-color: rgb(24, 111, 182);
+  color: black;
+  font-weight: bolder;
+}
+.submit:hover{
+  background-color: blue;
+  transition: transform 0.5;
+}
+#cart.active {
+  right: 0;
+}

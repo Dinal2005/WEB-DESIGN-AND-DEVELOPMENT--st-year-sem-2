@@ -1,0 +1,156 @@
+<!-- This Page done by -->
+<!-- Name : T.J.Dinal.I.Fernando -->
+<!-- IIT ID : 20220536 -->
+<!-- UOW ID : w2000072 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products || Shop</title>
+  <link rel="stylesheet" href="buyproducts.css">
+  <link rel="stylesheet" href="navigation.css">
+</head>
+<body>
+  <section id = "header">
+    <section id="header">
+        <header>
+        <div class="logo">
+        <img src="student02 _IMG/LOGO.png"  alt="background">
+        </div>
+        <div class="one">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Comments</a></li>
+        <li><a href="#" class="active">Shop</a></li>
+        <li><a href="#">Quiz</a></li>
+        <li><a href="#">Site Map</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">About Us</a></li>
+    </ul>
+</nav>
+</section>
+<script>
+    one=document.querySelector(".one");
+    one.onclick=function(){
+        navBar=document.querySelector(".nav-bar");
+        navBar.classList.toggle("active")
+    }
+</script>
+<!-- Refferenced https://www.w3schools.com/howto/howto_css_fullscreen_video.asp -->
+<video autoplay muted loop id="myVideo">                
+  <source src="Background.mp4" type="video/mp4">
+</video>
+  <div class="cart-icon">
+    <img src="student02 _IMG/cart.png" alt="Cart Icon" width="40" height="40" onclick="toggleCart()">
+  </div>
+  <h1>Welcome To The CHEM PLUS Shop!</h1>
+  <h2>You May Experience Our Procucts that needed for Your Labourtory..</h2>
+  <div class="buyproducts">
+    <form name="BuyProducts" action="paymentcheckout.html">
+      <fieldset id="Products_Items">
+        <legend>Shop</legend>
+        <!-- Products -->
+        <div class="products">
+          <div class="products_page">
+            <!-- product 01 -->
+            <div class="product_cart">
+              <img src="student02 _IMG/Product 01.png" alt="Product 01" width="300" height="300">
+              <p>Microscope</p>
+              <p>&#36; 2100</p>
+              <label for="quantity_01">Quantity: </label>
+              <input type="number" id="quantity_01" name="Quantity_01" min="0" value="0">
+              <br>
+              <br>
+              <br>
+              <button type="button" class="btn selected_product" name="button01" onclick="addToCart(1)">Add To Cart</button>
+            </div>
+            <!-- product 02 -->
+            <div class="product_cart">
+              <img src="student02 _IMG/Product 02.png" alt="Product 02" width="300" height="300">
+              <p>Test Tubes</p>
+              <p>&#36; 12</p>
+              <label for="quantity_02">Quantity: </label>
+              <input type="number" id="quantity_02" name="Quantity_02" min="0" value="0">
+              <br>
+              <br>
+              <br>
+              <button type="button" class="btn selected_product" name="button02" onclick="addToCart(2)">Add To Cart</button>
+            </div>
+            <!-- product 03 -->
+            <div class="product_cart">
+              <img src="student02 _IMG/Product 03.png" alt="Product 03" width="300" height="300">
+              <p>Beaker</p>
+              <p>&#36; 30</p>
+              <label for="quantity_03">Quantity: </label>
+              <input type="number" id="quantity_03" name="Quantity_03" min="0" value="0">
+              <br>
+              <br>
+              <br>
+              <button type="button" class="btn selected_product" name="button03" onclick="addToCart(3)">Add To Cart</button>
+            </div>
+              <!-- product 04 -->
+              <div class="product_cart">
+                <img src="student02 _IMG/Product 04.png" alt="Product 04" width="300" height="300">
+                <p>Bunsen Burner</p>
+                <p>&#36; 110</p>
+                <label for="Quantity_04">Quantity: </label>
+                <input type="number" id="quantity_04" name="Quantity_04" min="0" value="0">
+                <br>
+                <br>
+                <br>
+                <button type="button" class="btn selected_product" name="button04" onclick="addToCart(4)">Add To Cart</button>
+              </div>
+              <!-- product 05 -->
+              <div class="product_cart">
+                <img src="student02 _IMG/product 05.png" alt="Product 05" width="300" height="300">
+                <p>Weighing Machines</p>
+                <p>&#36; 15</p>
+                <label for="quantity_05">Quantity: </label>
+                <input type="number" id="quantity_05" name="Quantity_05" min="0" value="0">
+                <br>
+                <br>
+                <br>
+                <button type="button" class="btn selected_product" name="button05" onclick="addToCart(5)">Add To Cart</button>
+              </div>
+              <!-- product 06 -->
+              <div class="product_cart">
+                <img src="student02 _IMG/Product 06.png" alt="Product 06" width="300" height="300">
+                <p>Ammeter</p>
+                <p>&#36; 165</p>
+                <label for="quantity_06">Quantity: </label>
+                <input type="number" id="quantity_06" name="Quantity_06" min="0" value="0">
+                <br>
+                <br>
+                <br>
+                <button type="button" class="btn selected_product" name="button06" onclick="addToCart(6)">Add To Cart</button>
+              </div>
+          </div>
+        </div>
+      </fieldset>
+      <!-- Refferenced for the side bar cart https://www.youtube.com/watch?v=fnh-Ux4Jj5E -->
+      <div id="cart" onclick="toggleCart">
+        <fieldset>
+          <legend>CART</legend>
+          <br>
+          <dl id="order"></dl>
+          <p>Proceed to Complete Your Order : <br>#######################################</p>
+          <h2>Total Price : &#36; <span id="total_bill">0</span></h2>
+        </fieldset>
+        <br>
+        <br>
+        <div class="submit_button">
+          <input type="submit" id="Proceed" class="submit" value="Proceed" disabled onclick="checkCart()">
+        </div>
+      </div>
+    </form>
+  <script src="buyproducts.js"></script>
+</body>
+</html>
