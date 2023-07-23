@@ -1,3 +1,8 @@
+<!-- This Page done by -->
+<!-- Name : T.J.Dinal.I.Fernando -->
+<!-- IIT ID : 20220536 -->
+<!-- UOW ID : w2000072 -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout Page || Shop</title>
     <link rel="stylesheet" href="checkoutpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Refferenced https://www.w3schools.com/howto/howto_css_fullscreen_video.asp -->
@@ -48,7 +54,7 @@
     
         </div>
     
-        <form action="buyproducts.html">
+        <form action="#" onsubmit="return validateForm()">
             <div class="inputBox">
                 <span>card number</span>
                 <input type="text" maxlength="16" class="card-number-input" placeholder="XXXX - XXXX - XXXX - XXXX" required>
@@ -127,10 +133,15 @@
             </fieldset>
             <div class="inputBox total-box">
                 <span>Total : </span>
-                <div id="total_amount" class="total-amount">$ 0.00</div>
+                <h2>$<span id="total_bill">0.00</span>.00</h2>
             </div>
             <input type="submit" value="Place The Order" class="submit-btn" id="submit-btn">
         </form>
+        <div class="back-to-top">
+            <a href="#top">
+              <i class="fa fa-arrow-up"></i>
+            </a>
+          </div>
         <script src="checkoutpage.js"></script>
 </body>
 </html>

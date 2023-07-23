@@ -1,3 +1,9 @@
+/* This Page done by */
+/* Name : T.J.Dinal.I.Fernando */
+/* IIT ID : 20220536  */
+/* UOW ID : w2000072  */
+
+
 /* Imported font family */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
@@ -216,13 +222,46 @@
 }
 
 .container form .inputBox.total-box span {
-    flex: 1 1 150px;
+    flex: 1 1 auto;
     color: #fff;
     font-size: 20px;
 }
-
-.container form .inputBox.total-box .total-amount {
+.container form .inputBox.total-box h2{
+    margin: 0; 
     color: #fff;
     font-size: 20px;
     font-weight: bold;
 }
+.container form .inputBox.total-box h2 span {
+    margin-left: 5px;
+}
+#total_bill {
+    display: inline; 
+}
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+  .back-to-top a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff; 
+    color: #fff; 
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .back-to-top a:hover {
+    background-color: #0056b3; 
+  }
+  
+  .back-to-top i {
+    font-size: 24px;
+  }

@@ -80,7 +80,9 @@ function checkCart() {
     updateTotalPrice();
     const totalPrice = parseFloat(document.getElementById("total_bill").innerHTML);
     if (totalPrice !== 0) {
+        localStorage.setItem("totalBill", totalPrice); // Added statement
         alert("Taking you to the Checkout Page..");
+        window.location.href = "checkoutpage.html"; // Redirect the user to the checkoutpage.html
         return true;
     } else {
         alert("Your cart is empty! Please add some products.");
@@ -121,7 +123,6 @@ function getProductLabel(productId) {
     };
     return productLabels[productId];
 }
-
 // Update the cart count display
 function updateCartCount() {
     document.getElementById("cart-count").textContent = cartCount;
