@@ -4,19 +4,23 @@
 header{
     position: relative;
     height: 60px;
-    width: 86.7%;
+    width: 100%;
     background: hsl(0, 0%, 95%);
     display: flex;
     align-items: center;
     justify-content:space-between ;
     padding:0 100px;
-    margin: 0.2px;
+    box-sizing: border-box;
 }
 
 .logo img{
     position: relative;
     width: 200px;
     order: -1;  
+}
+
+nav{
+    flex-grow: 1;
 }
 
 nav ul {

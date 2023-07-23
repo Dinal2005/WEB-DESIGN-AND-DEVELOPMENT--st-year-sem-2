@@ -1,16 +1,19 @@
 // This Page done by
-// Name : T.J.Dinal.I.Fernando
-// IIT ID : 20220536
-// UOW ID : w2000072
+// Name: T.J.Dinal.I.Fernando
+// IIT ID: 20220536
+// UOW ID: w2000072
 
+// Initialize the cart items and cart count
+const cartItems = [];
+let cartCount = 0;
 
-// Refferenced for the side bar cart https://www.youtube.com/watch?v=fnh-Ux4Jj5E
 function toggleCart() {
     const cart = document.getElementById('cart');
     cart.classList.toggle('active');
 }
 
-const prices = {
+// Product prices
+const productPrices = {
     1: 2100,
     2: 12,
     3: 30,
@@ -19,44 +22,65 @@ const prices = {
     6: 165
 };
 
+// Add a product to the cart
 function addToCart(productId) {
     const quantity = parseInt(document.getElementById("quantity_0" + productId).value);
     if (quantity === 0) {
         alert("There should be at least 1 quantity to add to cart!");
-    } else {
-        const price = prices[productId];
-        const productPrice = quantity * price;
-        const productName = getProductLabel(productId);
-        const productListItem = document.createElement("dd");
-        productListItem.innerHTML = productName + " : " + quantity + " x $" + price.toFixed(2) + "  = $" + productPrice.toFixed(2);
-        document.getElementById("order").appendChild(productListItem);
-        updateTotalPrice();
+        return;
     }
+
+    const price = productPrices[productId];
+    const productPrice = quantity * price;
+    const productName = getProductLabel(productId);
+
+    cartItems.push({
+        productId,
+        productName,
+        quantity,
+        productPrice,
+    });
+
+    const productListItem = document.createElement("dd");
+    productListItem.setAttribute("id", `cart-item-${productId}`);
+    productListItem.innerHTML = `<span class="product-name">${productName}:</span> <span class="quantity">${quantity}</span> x <span class="product-price">$${productPrice.toFixed(2)}</span>`;
+
+    const deleteIcon = document.createElement("i");
+    deleteIcon.classList.add("fas", "fa-trash-alt");
+    deleteIcon.setAttribute("onclick", `removeFromCart(${productId})`);
+    productListItem.appendChild(deleteIcon);
+
+    document.getElementById("order").appendChild(productListItem);
+
+    // Update the total price and cart count
+    updateTotalPrice();
+    cartCount = cartItems.length;
+    updateCartCount();
+
+    // Reset the quantity field after adding to cart
+    document.getElementById("quantity_0" + productId).value = 1;
 }
 
-// Function to update total price in the cart
+// Update the total price in the cart
 function updateTotalPrice() {
     let totalPrice = 0;
-    for (let i = 1; i <= 6; i++) {
-        const quantity = parseInt(document.getElementById("quantity_0" + i).value);
-        const price = prices[i];
+    for (const cartItem of cartItems) {
+        const { productId, quantity } = cartItem;
+        const price = productPrices[productId];
         totalPrice += quantity * price;
     }
+
+    // Update the total in the cart
     document.getElementById("total_bill").innerHTML = totalPrice.toFixed(2);
-    const proceedButton = document.getElementById("Proceed");
-    if (totalPrice !== 0) {
-        proceedButton.disabled = false; // Enable the button if totalPrice is not equal to 0
-    } else {
-        proceedButton.disabled = true; // Disable the button if totalPrice is equal to 0
-    }
+    document.getElementById("Proceed").disabled = totalPrice === 0;
 }
 
+// Check if the cart is not empty before proceeding to the form
 function checkCart() {
     updateTotalPrice();
     const totalPrice = parseFloat(document.getElementById("total_bill").innerHTML);
-
     if (totalPrice !== 0) {
-        alert("Proceeding to the form!");
+        alert("Taking you to the Checkout Page..");
         return true;
     } else {
         alert("Your cart is empty! Please add some products.");
@@ -64,19 +88,41 @@ function checkCart() {
     }
 }
 
-function getProductLabel(productId) {
-    switch (productId) {
-        case 1:
-            return "Microscope";
-        case 2:
-            return "Test Tubes";
-        case 3:
-            return "Beaker";
-        case 4:
-            return "Bunsen Burner";
-        case 5:
-            return "Weighing Machines";
-        case 6:
-            return "Ammeter";
+// Function to remove an item
+function removeFromCart(productId) {
+    const productIndex = cartItems.findIndex((item) => item.productId === productId);
+    if (productIndex !== -1) {
+        const quantity = cartItems[productIndex].quantity;
+        cartItems.splice(productIndex, 1);
+        cartCount = cartItems.length;
+        updateCartCount();
+
+        const price = productPrices[productId];
+        const productPrice = quantity * price;
+        const totalPrice = parseFloat(document.getElementById("total_bill").innerHTML);
+        const newTotalPrice = totalPrice - productPrice;
+
+        document.getElementById("total_bill").innerHTML = newTotalPrice.toFixed(2);
+
+        const productListItem = document.getElementById(`cart-item-${productId}`);
+        productListItem.remove();
     }
+}
+
+// Get the product label based on the product ID
+function getProductLabel(productId) {
+    const productLabels = {
+        1: "Microscope",
+        2: "Test Tubes",
+        3: "Beaker",
+        4: "Bunsen Burner",
+        5: "Weighing Machines",
+        6: "Ammeter"
+    };
+    return productLabels[productId];
+}
+
+// Update the cart count display
+function updateCartCount() {
+    document.getElementById("cart-count").textContent = cartCount;
 }

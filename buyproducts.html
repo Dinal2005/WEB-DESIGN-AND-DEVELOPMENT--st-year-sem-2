@@ -12,6 +12,8 @@
   <title>Products || Shop</title>
   <link rel="stylesheet" href="buyproducts.css">
   <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
   <section id = "header">
@@ -48,13 +50,14 @@
 <video autoplay muted loop id="myVideo">                
   <source src="Background.mp4" type="video/mp4">
 </video>
-  <div class="cart-icon">
-    <img src="student02 _IMG/cart.png" alt="Cart Icon" width="40" height="40" onclick="toggleCart()">
-  </div>
+<div class="cart-icon" onclick="toggleCart()">
+  <i class="fas fa-shopping-cart"></i>
+  <span id="cart-count">0</span>
+</div>
   <h1>Welcome To The CHEM PLUS Shop!</h1>
   <h2>You May Experience Our Procucts that needed for Your Labourtory..</h2>
   <div class="buyproducts">
-    <form name="BuyProducts" action="paymentcheckout.html">
+    <form name="BuyProducts" action="checkoutpage.html">
       <fieldset id="Products_Items">
         <legend>Shop</legend>
         <!-- Products -->
@@ -64,9 +67,9 @@
             <div class="product_cart">
               <img src="student02 _IMG/Product 01.png" alt="Product 01" width="300" height="300">
               <p>Microscope</p>
-              <p>&#36; 2100</p>
+              <p>&#36; 2100.00</p>
               <label for="quantity_01">Quantity: </label>
-              <input type="number" id="quantity_01" name="Quantity_01" min="0" value="0">
+              <input type="number" id="quantity_01" name="Quantity_01" min="" value="1">
               <br>
               <br>
               <br>
@@ -76,9 +79,9 @@
             <div class="product_cart">
               <img src="student02 _IMG/Product 02.png" alt="Product 02" width="300" height="300">
               <p>Test Tubes</p>
-              <p>&#36; 12</p>
+              <p>&#36; 12.00</p>
               <label for="quantity_02">Quantity: </label>
-              <input type="number" id="quantity_02" name="Quantity_02" min="0" value="0">
+              <input type="number" id="quantity_02" name="Quantity_02" min="1" value="1">
               <br>
               <br>
               <br>
@@ -88,9 +91,9 @@
             <div class="product_cart">
               <img src="student02 _IMG/Product 03.png" alt="Product 03" width="300" height="300">
               <p>Beaker</p>
-              <p>&#36; 30</p>
+              <p>&#36; 30.00</p>
               <label for="quantity_03">Quantity: </label>
-              <input type="number" id="quantity_03" name="Quantity_03" min="0" value="0">
+              <input type="number" id="quantity_03" name="Quantity_03" min="1" value="1">
               <br>
               <br>
               <br>
@@ -100,9 +103,9 @@
               <div class="product_cart">
                 <img src="student02 _IMG/Product 04.png" alt="Product 04" width="300" height="300">
                 <p>Bunsen Burner</p>
-                <p>&#36; 110</p>
+                <p>&#36; 110.00</p>
                 <label for="Quantity_04">Quantity: </label>
-                <input type="number" id="quantity_04" name="Quantity_04" min="0" value="0">
+                <input type="number" id="quantity_04" name="Quantity_04" min="1" value="1">
                 <br>
                 <br>
                 <br>
@@ -112,9 +115,9 @@
               <div class="product_cart">
                 <img src="student02 _IMG/product 05.png" alt="Product 05" width="300" height="300">
                 <p>Weighing Machines</p>
-                <p>&#36; 15</p>
+                <p>&#36; 15.00</p>
                 <label for="quantity_05">Quantity: </label>
-                <input type="number" id="quantity_05" name="Quantity_05" min="0" value="0">
+                <input type="number" id="quantity_05" name="Quantity_05" min="1" value="1">
                 <br>
                 <br>
                 <br>
@@ -124,9 +127,9 @@
               <div class="product_cart">
                 <img src="student02 _IMG/Product 06.png" alt="Product 06" width="300" height="300">
                 <p>Ammeter</p>
-                <p>&#36; 165</p>
+                <p>&#36; 165.00</p>
                 <label for="quantity_06">Quantity: </label>
-                <input type="number" id="quantity_06" name="Quantity_06" min="0" value="0">
+                <input type="number" id="quantity_06" name="Quantity_06" min="1" value="1">
                 <br>
                 <br>
                 <br>
@@ -140,7 +143,8 @@
         <fieldset>
           <legend>CART</legend>
           <br>
-          <dl id="order"></dl>
+          <dl id="order">
+          </dl>
           <p>Proceed to Complete Your Order : <br>#######################################</p>
           <h2>Total Price : &#36; <span id="total_bill">0</span></h2>
         </fieldset>
@@ -151,6 +155,11 @@
         </div>
       </div>
     </form>
+    <div class="back-to-top">
+      <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+      </a>
+    </div>
   <script src="buyproducts.js"></script>
 </body>
 </html>
