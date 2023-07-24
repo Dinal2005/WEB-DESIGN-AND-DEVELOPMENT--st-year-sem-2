@@ -97,6 +97,10 @@ body, html {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: block;
     height: 300px;
+    text-align: center;
+}
+.mainbutton{
+    text-align: center;
 }
   
 .presentation-page h2,
@@ -137,11 +141,13 @@ body, html {
     padding: 15px 30px;
     font-size: 20px;
     background-color: #004080;
+    align-content: center;
     color: #fff;
     border: none;
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-align: center;
 }
   
 .presentation-page button:hover,
