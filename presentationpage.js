@@ -6,7 +6,7 @@
 // Creating a function to timeout the current page after 4 seconds..
 function presentationpage4sec() {
     setTimeout(function() {
-      window.location.href = 'buyproducts.html';
+      window.location.href = '../../Student02/Role_2/html_Files/Home_Page.html';
     }, 4000); 
   }
 
