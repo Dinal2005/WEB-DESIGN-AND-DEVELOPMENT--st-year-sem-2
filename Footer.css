@@ -1,0 +1,123 @@
+/* This Page done by */
+/* Name : T.J.Dinal.I.Fernando */
+/* IIT ID : 20220536  */
+/* UOW ID : w2000072  */
+
+
+/* Revised CSS for footer */
+.footer {
+    padding: 10px 0;
+    background: radial-gradient(circle at 1.3% 2.8%, rgb(239, 249, 249) 0%, rgb(182, 199, 226) 100.2%);;
+    color: #000000;
+    text-align: center;
+  }
+  
+  .footer .box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer .box-container .box {
+    flex: 1 1 calc(25% - 20px);
+    margin: 20px;
+  }
+  
+  .footer .box-container .box h3 {
+    font-size: 24px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: #130527;
+  }
+  
+  .footer .box-container .box p {
+    font-size: 14px;
+    color: black;
+    padding: 5px 0;
+  }
+  
+  .footer .box-container .box p i {
+    padding-right: 10px;
+    color: #050545;
+  }
+  
+  .footer .box-container .box a {
+    font-size: 16px;
+    color: #030303;
+    padding: 8px 0;
+    display:block;
+    text-decoration: none;
+  }
+  
+  .footer .box-container .box a:hover {
+    color: navy;
+  }
+  
+  .footer .box-container .box .share {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  
+  .footer .box-container .box .share a {
+    height: 40px;
+    width: 53px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 90%;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: 0.2s;
+    background: #eee;
+    color: #7d81a2;
+  }
+  
+  .footer .box-container .box .share a:hover {
+    background: transparent;
+    transform: scale(0.9);
+    color: navy;
+  }
+  
+  .footer .credit {
+    padding: 10px 0 0 0;
+    font-size: 12px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    color: black;
+  }
+  
+  .footer .credit a {
+    color: #9d9075;
+  }
+  
+  .footer .fa {
+    color: #e90606;
+    margin: 0 3px;
+    font-size: 18px;
+    animation: pound 0.35s infinite alternate;
+  }
+  
+  .footer .copyright {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 15px;
+    text-transform: none;
+  }
+  
+  .footer .copyright p {
+    font-weight: 700;
+    margin: 0;
+    color: black;
+  }
+  
+  .footer .copyright p a {
+    color: #0b095e;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+  
+  .footer .copyright p a:hover {
+    color: red;
+    text-decoration: underline;
+  }

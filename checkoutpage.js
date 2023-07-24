@@ -81,7 +81,7 @@ function validateForm() {
     const emailValue = emailInput.value;
     const isValidEmail = validateEmail(emailValue);
 
-    // Add any additional validation checks for other input fields here
+    // validations
     const cardNumberInput = document.querySelector('.card-number-input');
     const cardHolderInput = document.querySelector('.card-holder-input');
     const monthInput = document.querySelector('.month-input');

@@ -3,7 +3,7 @@
 // IIT ID: 20220536
 // UOW ID: w2000072
 
-// Initialize the cart items and cart count
+// cart item and count 
 const cartItems = [];
 let cartCount = 0;
 
@@ -57,7 +57,6 @@ function addToCart(productId) {
     cartCount = cartItems.length;
     updateCartCount();
 
-    // Reset the quantity field after adding to cart
     document.getElementById("quantity_0" + productId).value = 1;
 }
 
@@ -75,7 +74,7 @@ function updateTotalPrice() {
     document.getElementById("Proceed").disabled = totalPrice === 0;
 }
 
-// Check if the cart is not empty before proceeding to the form
+// Check if the cart is not empty before going to the next step
 function checkCart() {
     updateTotalPrice();
     const totalPrice = parseFloat(document.getElementById("total_bill").innerHTML);

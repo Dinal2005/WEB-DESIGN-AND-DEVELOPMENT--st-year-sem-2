@@ -1,3 +1,9 @@
+/* This Page done by */
+/* Name : T.J.Dinal.I.Fernando */
+/* IIT ID : 20220536  */
+/* UOW ID : w2000072  */
+
+
 body, html {
     margin: 0;
     padding: 0;
@@ -31,35 +37,52 @@ body, html {
   .back-to-top i {
     font-size: 24px;
   }  
-.first-box {
+  .topic{
     background-image: linear-gradient(-45deg, #002147, #004080, #0d98ba, #3ea6d1, #4f9dc9);
-    width: 100%;
-    height: 50px;
-    display: flex;
+    border-radius: 20px;
+    margin: 50px 50px 70px 50px;
+    padding: 50px 0 50px 0;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-}
-  
-.top-text {
-    font-size: 30px;
-    font-weight: bolder;
-    color: black;
     text-align: center;
+    box-shadow: 5px 5px 11px rgba(0,0,0,0.8);
 }
-.mydetails {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.topic h1{
+    font-weight: bolder;
+    color: #ffffff;
 }
-  .mydetails h3 {
-    font-size: 15px;
-    margin: 5px 0; 
+.topic p{
+    font-weight: bolder;
+    color: #ffffff;
 } 
-
+.animation_h1{
+    animation: fade-in 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+}
+.animation_h2{
+    animation-name: fade-in;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode:backwards;
+}
+/* creating animations */
+@keyframes fade-in{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+        filter: blur(8px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+        filter: none;
+    }
+}
 .second-box {
     background-image: linear-gradient(-45deg, #002147, #004080, #0d98ba, #3ea6d1, #4f9dc9);
     width: 100%;
-    height: 1240px;
+    height: 1250px;
     margin-top: 50px;
 }
 .presentation-page,
@@ -89,7 +112,8 @@ body, html {
   
 .presentation-page p,
 .products-page p,
-.extra-page p {
+.extra-page p,
+.mainbutton p {
     color: black;
     text-align: center;
     font-size: 18px;
@@ -98,7 +122,8 @@ body, html {
   
 .presentation-page a,
 .products-page a,
-.extra-page a {
+.extra-page a,
+.mainbutton a {
     display: block;
     text-align: center;
     margin-top: 30px;
@@ -107,7 +132,8 @@ body, html {
   
 .presentation-page button,
 .products-page button,
-.extra-page button {
+.extra-page button,
+.mainbutton button {
     padding: 15px 30px;
     font-size: 20px;
     background-color: #004080;
@@ -120,7 +146,10 @@ body, html {
   
 .presentation-page button:hover,
 .products-page button:hover,
-.extra-page button:hover {
+.extra-page button:hover,
+.mainbutton button:hover {
     background-color: #002147;
 }
-  
+.mainbutton{
+    padding-bottom: 20px;
+}

@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout Page || Shop</title>
     <link rel="stylesheet" href="checkoutpage.css">
+    <link id='favicon' rel="shortcut icon" href="student02_IMG/LOGO.png" type="image/x-png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -21,11 +22,11 @@
     <div class="container">
 
         <div class="card-container">
-    
+            <!--  -->
             <div class="front">
                 <div class="image">
-                    <img src="student02 _IMG/chip.png" alt="">
-                    <img src="student02 _IMG/visa.png" alt="">
+                    <img src="student02_IMG/chip.png" alt="">
+                    <img src="student02_IMG/visa.png" alt="">
                 </div>
                 <div class="card-number-box">XXXX - XXXX - XXXX - XXXX</div>
                 <div class="flexbox">
@@ -48,12 +49,12 @@
                 <div class="box">
                     <span>cvv</span>
                     <div class="cvv-box"></div>
-                    <img src="student02 _IMG/visa.png" alt="">
+                    <img src="student02_IMG/visa.png" alt="">
                 </div>
             </div>
     
         </div>
-    
+    <!-- form -->
         <form action="#" onsubmit="return validateForm()">
             <div class="inputBox">
                 <span>card number</span>
@@ -61,12 +62,12 @@
             </div>
             <div class="inputBox">
                 <span>card holder</span>
-                <input type="text" class="card-holder-input" placeholder="Name on card"required>
+                <input type="text" class="card-holder-input" placeholder="Name on card" required>
             </div>
             <div class="flexbox">
                 <div class="inputBox">
                     <span>expiration mm</span>
-                    <select name="" id="" class="month-input"required>
+                    <select name="month" id="month" class="month-input" required>
                         <option value="month" selected disabled>month</option>
                         <option value="01">01</option>
                         <option value="02">02</option>
@@ -84,7 +85,7 @@
                 </div>
                 <div class="inputBox">
                     <span>expiration yy</span>
-                    <select name="" id="" class="year-input"required>
+                    <select name="year" id="year" class="year-input" required>
                         <option value="year" selected disabled>year</option>
                         <option value="2021">2021</option>
                         <option value="2022">2022</option>
@@ -104,15 +105,16 @@
                 </div>
             </div>
             <br>
+            <!-- Billing Informations -->
             <fieldset>
                 <legend>BILLING INFORMATIONS</legend>
                 <div class="inputBox">
                     <span>Full Name</span>
-                    <input type="text" class="full-name-input" placeholder="Full Name"required>
+                    <input type="text" class="full-name-input" placeholder="Full Name" required>
                 </div>
                 <div class="inputBox">
                     <span>Email</span>
-                    <input type="email" class="email-input" placeholder="abc@gmail.com"required>
+                    <input type="email" class="email-input" placeholder="abc@gmail.com" required>
                 </div>
                 <div class="inputBox">
                     <span>Contact Number</span>
@@ -120,14 +122,14 @@
                 </div>
                 <div class="inputBox">
                     <span>Address</span>
-                    <input type="text" class="address-input" placeholder="Address"required>
+                    <input type="text" class="address-input" placeholder="Address" required>
                 </div>
                 <div class="inputBox">
                     <span>Zip code</span>
                     <input type="text" class="zip-code-input" placeholder="Zip code" required>
                 </div>
                 <div class="inputBox">
-                    <input type="checkbox" class="terms-conditions-checkbox"required>
+                    <input type="checkbox" class="terms-conditions-checkbox" required>
                     <label for="terms">I agree to the terms and conditions : </label>
                 </div>
             </fieldset>
@@ -142,6 +144,7 @@
               <i class="fa fa-arrow-up"></i>
             </a>
           </div>
+    </div>
         <script src="checkoutpage.js"></script>
 </body>
 </html>

@@ -6,78 +6,88 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products || Shop</title>
   <link rel="stylesheet" href="buyproducts.css">
   <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="Footer.css">
+  <link id='favicon' rel="shortcut icon" href="student02_IMG/LOGO.png" type="image/x-png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+
 <body>
-  <section id = "header">
-    <section id="header">
-        <header>
-        <div class="logo">
-        <img src="student02 _IMG/LOGO.png"  alt="background">
-        </div>
-        <div class="one">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-<nav>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Comments</a></li>
-        <li><a href="buyproducts.html" class="active">Shop</a></li>
-        <li><a href="#">Quiz</a></li>
-        <li><a href="#">Site Map</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">About Us</a></li>
-    </ul>
-</nav>
-</section>
-<script>
-    one=document.querySelector(".one");
-    one.onclick=function(){
-        navBar=document.querySelector(".nav-bar");
-        navBar.classList.toggle("active")
+  <section id="header">
+    <header>
+      <div class="logo">
+        <img src="student02_IMG/LOGO.png" alt="background">
+      </div>
+      <div class="one">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Comments</a></li>
+          <li><a href="buyproducts.html" class="active">Shop</a></li>
+          <li><a href="#">Quiz</a></li>
+          <li><a href="#">Site Map</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+  </section>
+  <script>
+    one = document.querySelector(".one");
+    one.onclick = function () {
+      navBar = document.querySelector(".nav-bar");
+      navBar.classList.toggle("active")
     }
-</script>
-<!-- Refferenced https://www.w3schools.com/howto/howto_css_fullscreen_video.asp -->
-<video autoplay muted loop id="myVideo">                
-  <source src="Background.mp4" type="video/mp4">
-</video>
-<div class="cart-icon" onclick="toggleCart()">
-  <i class="fas fa-shopping-cart"></i>
-  <span id="cart-count">0</span>
-</div>
+  </script>
+  <!-- Refferenced https://www.w3schools.com/howto/howto_css_fullscreen_video.asp -->
+  <video autoplay muted loop id="myVideo">
+    <source src="Background.mp4" type="video/mp4">
+  </video>
+  <!-- Add cart icon -->
+  <div class="cart-icon" onclick="toggleCart()">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
+  </div>
   <h1>Welcome To The CHEM PLUS Shop!</h1>
   <h2>You May Experience Our Procucts that needed for Your Labourtory..</h2>
   <div class="buyproducts">
     <form name="BuyProducts" action="checkoutpage.html">
       <fieldset id="Products_Items">
         <legend>Shop</legend>
+        <!-- Add products -->
         <!-- Products -->
         <div class="products">
           <div class="products_page">
             <!-- product 01 -->
             <div class="product_cart">
-              <img src="student02 _IMG/Product 01.png" alt="Product 01" width="300" height="300">
+              <img src="student02_IMG/Product 01.png" alt="Product 01" width="300" height="300">
               <p>Microscope</p>
               <p>&#36; 2100.00</p>
               <label for="quantity_01">Quantity: </label>
-              <input type="number" id="quantity_01" name="Quantity_01" min="" value="1">
+              <input type="number" id="quantity_01" name="Quantity_01" min="1" value="1">
               <br>
               <br>
               <br>
-              <button type="button" class="btn selected_product" name="button01" onclick="addToCart(1)">Add To Cart</button>
+              <button type="button" class="btn selected_product" name="button01" onclick="addToCart(1)">Add To
+                Cart</button>
             </div>
             <!-- product 02 -->
             <div class="product_cart">
-              <img src="student02 _IMG/Product 02.png" alt="Product 02" width="300" height="300">
+              <img src="student02_IMG/Product 02.png" alt="Product 02" width="300" height="300">
               <p>Test Tubes</p>
               <p>&#36; 12.00</p>
               <label for="quantity_02">Quantity: </label>
@@ -85,11 +95,12 @@
               <br>
               <br>
               <br>
-              <button type="button" class="btn selected_product" name="button02" onclick="addToCart(2)">Add To Cart</button>
+              <button type="button" class="btn selected_product" name="button02" onclick="addToCart(2)">Add To
+                Cart</button>
             </div>
             <!-- product 03 -->
             <div class="product_cart">
-              <img src="student02 _IMG/Product 03.png" alt="Product 03" width="300" height="300">
+              <img src="student02_IMG/Product 03.png" alt="Product 03" width="300" height="300">
               <p>Beaker</p>
               <p>&#36; 30.00</p>
               <label for="quantity_03">Quantity: </label>
@@ -97,47 +108,52 @@
               <br>
               <br>
               <br>
-              <button type="button" class="btn selected_product" name="button03" onclick="addToCart(3)">Add To Cart</button>
+              <button type="button" class="btn selected_product" name="button03" onclick="addToCart(3)">Add To
+                Cart</button>
             </div>
-              <!-- product 04 -->
-              <div class="product_cart">
-                <img src="student02 _IMG/Product 04.png" alt="Product 04" width="300" height="300">
-                <p>Bunsen Burner</p>
-                <p>&#36; 110.00</p>
-                <label for="Quantity_04">Quantity: </label>
-                <input type="number" id="quantity_04" name="Quantity_04" min="1" value="1">
-                <br>
-                <br>
-                <br>
-                <button type="button" class="btn selected_product" name="button04" onclick="addToCart(4)">Add To Cart</button>
-              </div>
-              <!-- product 05 -->
-              <div class="product_cart">
-                <img src="student02 _IMG/product 05.png" alt="Product 05" width="300" height="300">
-                <p>Weighing Machines</p>
-                <p>&#36; 15.00</p>
-                <label for="quantity_05">Quantity: </label>
-                <input type="number" id="quantity_05" name="Quantity_05" min="1" value="1">
-                <br>
-                <br>
-                <br>
-                <button type="button" class="btn selected_product" name="button05" onclick="addToCart(5)">Add To Cart</button>
-              </div>
-              <!-- product 06 -->
-              <div class="product_cart">
-                <img src="student02 _IMG/Product 06.png" alt="Product 06" width="300" height="300">
-                <p>Ammeter</p>
-                <p>&#36; 165.00</p>
-                <label for="quantity_06">Quantity: </label>
-                <input type="number" id="quantity_06" name="Quantity_06" min="1" value="1">
-                <br>
-                <br>
-                <br>
-                <button type="button" class="btn selected_product" name="button06" onclick="addToCart(6)">Add To Cart</button>
-              </div>
+            <!-- product 04 -->
+            <div class="product_cart">
+              <img src="student02_IMG/Product 04.png" alt="Product 04" width="300" height="300">
+              <p>Bunsen Burner</p>
+              <p>&#36; 110.00</p>
+              <label for="quantity_04">Quantity: </label>
+              <input type="number" id="quantity_04" name="Quantity_04" min="1" value="1">
+              <br>
+              <br>
+              <br>
+              <button type="button" class="btn selected_product" name="button04" onclick="addToCart(4)">Add To
+                Cart</button>
+            </div>
+            <!-- product 05 -->
+            <div class="product_cart">
+              <img src="student02_IMG/product 05.png" alt="Product 05" width="300" height="300">
+              <p>Weighing Machines</p>
+              <p>&#36; 15.00</p>
+              <label for="quantity_05">Quantity: </label>
+              <input type="number" id="quantity_05" name="Quantity_05" min="1" value="1">
+              <br>
+              <br>
+              <br>
+              <button type="button" class="btn selected_product" name="button05" onclick="addToCart(5)">Add To
+                Cart</button>
+            </div>
+            <!-- product 06 -->
+            <div class="product_cart">
+              <img src="student02_IMG/Product 06.png" alt="Product 06" width="300" height="300">
+              <p>Ammeter</p>
+              <p>&#36; 165.00</p>
+              <label for="quantity_06">Quantity: </label>
+              <input type="number" id="quantity_06" name="Quantity_06" min="1" value="1">
+              <br>
+              <br>
+              <br>
+              <button type="button" class="btn selected_product" name="button06" onclick="addToCart(6)">Add To
+                Cart</button>
+            </div>
           </div>
         </div>
       </fieldset>
+      <!-- sliding cart -->
       <!-- Refferenced for the side bar cart https://www.youtube.com/watch?v=fnh-Ux4Jj5E -->
       <div id="cart" onclick="toggleCart">
         <fieldset>
@@ -160,6 +176,57 @@
         <i class="fa fa-arrow-up"></i>
       </a>
     </div>
-  <script src="buyproducts.js"></script>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="box-container">
+
+        <div class="box">
+          <h3>Our Team</h3>
+          <a href="pageeditor.html" target="_blank"><i class="fas fa-chevron-circle-right"></i> Student 01 : Dinal
+            Fernando</a>
+          <a href="#about"><i class="fas fa-chevron-circle-right"></i> Student 02 : Daniel Peiris</a>
+          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> Student 03 : Eban Fernando</a>
+          <a href="#education"><i class="fas fa-chevron-circle-right"></i> Student 04 : Anusara Karunarathna</a>
+        </div>
+
+        <div class="box">
+          <h3>Quick Links</h3>
+          <a href="#home"><i class="fas fa-chevron-circle-right"></i> Home</a>
+          <a href="#about"><i class="fas fa-chevron-circle-right"></i> Buy Products</a>
+          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> Query Form</a>
+          <a href="#education"><i class="fas fa-chevron-circle-right"></i> Quiz</a>
+          <a href="#contact"><i class="fas fa-chevron-circle-right"></i> Student Details</a>
+          <a href="#education"><i class="fas fa-chevron-circle-right"></i> Sitemap</a>
+          <a href="#contact"><i class="fas fa-chevron-circle-right"></i> Gallery</a>
+        </div>
+
+        <div class="box">
+          <h3>Contact Info</h3>
+          <p> <i class="fas fa-envelope"></i>dinalfernando43@gmail.com</p>
+          <p> <i class="fas fa-envelope"></i>danielpeiris@gmail.com</p>
+          <p> <i class="fas fa-envelope"></i>ebanfernando43@gmail.com</p>
+          <p> <i class="fas fa-envelope"></i>anusarakarunaratna@gmail.com</p>
+          <div class="share">
+
+            <a href="https://www.linkedin.com/in/dinal-fernando-465065226" class="fab fa-linkedin" aria-label="LinkedIn"
+              target="_blank"></a>
+            <a href="https://github.com/Dinal2005" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
+            <a href="mailto:dinalfernando43@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+            <a href="https://web.facebook.com/profile.php?id=100090036782972" class="fab fa-facebook"
+              aria-label="Facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/dinal_imesha/" class="fab fa-instagram" aria-label="Instagram"
+              target="_blank"></a>
+            <a href="https://wa.me/+94701119189" class="fab fa-whatsapp" aria-label="Whatsapp" target="_blank"></a>
+          </div>
+        </div>
+        <div class="container copyright">
+          <p>&#169; <a href="index.html">CHEM PLUS</a>, All Right Reserved. Designed By <a href="pageeditor.html"
+              target="_blank">Dinal Fernando.</a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+    <script src="buyproducts.js"></script>
 </body>
+
 </html>
